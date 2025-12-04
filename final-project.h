@@ -1,10 +1,9 @@
-#include <unit-tests.h>
-#include <final-project.h>
+#ifndef FINAL-PROJECT_H
+#define FINAL-PROJECT_H
+// include libraries
+#include <iostream>
 
-int main() {
-
-    // call unit tests
+// declare functions
 
 
-    return 0;
-}
+#endif
