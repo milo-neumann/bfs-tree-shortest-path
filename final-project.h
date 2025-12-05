@@ -4,23 +4,35 @@
 // include libraries
 #include <vector>
 #include <iostream>
+#include <queue>
 
 // declare functions
+struct Node {
+    int vertex;   // current vertex
+    Node* next;   // pointer, represents an edge
+    Node(int v) : vertex(v), next(nullptr) {}
+};
+
+enum Color { WHITE, GRAY, BLACK };   // for BFS tracking
+
 class Graph {
     private:
         int numVertices;   // size of graph
-        std::vector<Node*> adjList;   // vector of pointers to linked list heads
+        std::vector<Node*> adjLists;   // vector of pointers to linked list heads
+        std::vector<Color> colors;
+        std::vector<int> parents;
     public:
-        Graph(int numVertices);   // graph constructor
-        void addEdge(int u, int v);   // adds edge u → v
-        void BFS(int s);   // breadth-first search from source s
-        void printGraph();   // prints adjacency lists
-};
+        Graph(int numVertices);   // constructor
+        ~Graph();   // destructor
+        Graph(const Graph& other);   // copy constructor
+        Graph& operator=(const Graph& other);   // copy assignment operator
 
-struct Node {
-    int vertex;
-    Node* next;
-    Node(int v) : vertex(v), next(nullptr) {}
+        void addVertex();
+        void addEdge(int u, int v);
+        void BFS(int s); 
+        void printGraph();   // prints adjacency lists
+        void printBFSTree(int s);
+        void printShortestPath(int s, int v);
 };
 
 #endif
