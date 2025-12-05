@@ -1,5 +1,5 @@
-#ifndef FINAL-PROJECT_H
-#define FINAL-PROJECT_H
+#ifndef FINAL_PROJECT_H
+#define FINAL_PROJECT_H
 // include libraries
 #include <iostream>
 
