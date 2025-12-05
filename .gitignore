@@ -1,0 +1,27 @@
+# Ignore build outputs
+*.exe
+*.obj
+*.o
+*.out
+*.dll
+*.lib
+*.pdb
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore editor and IDE settings
+.vscode/
+*.swp
+*.suo
+*.user
+*.db
+
+# Ignore MSYS2 / MinGW build directories
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile

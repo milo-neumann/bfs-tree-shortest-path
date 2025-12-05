@@ -4,6 +4,6 @@
 #include <iostream>
 
 // declare functions
-
+void printSnippet(std::string snippet);
 
 #endif

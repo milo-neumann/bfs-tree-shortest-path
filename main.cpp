@@ -4,7 +4,8 @@
 int main() {
 
     // call unit tests
-    std::cout << "Hello world!" << std::endl;
+    std::string blah = "how are we today!?";
+    printSnippet(blah);
 
     return 0;
 }

@@ -17,7 +17,7 @@ Class Graph: to store adjacency lists for each vertex
 Node struct (raw pointer): to from a singly linked list for each adjacency list
 Vector of all vertices: to store the adjacency list heads, dynamic, allows indexing by vertex ID
 Queue: for fifo access to graph, for BFS traversal
-Vector of 'colors': to track progress of BFS - more explicit than a boolean
+Vector of 'colors', vector of parents: to track progress of BFS - more explicit than a boolean
     WHITE → not discovered yet
     GRAY → discovered but not fully explored (currently in queue)
     BLACK → fully explored
@@ -26,9 +26,18 @@ Vector of 'colors': to track progress of BFS - more explicit than a boolean
 
 /*
 FUNCTIONS
-Graph: 
-    Constructors / Destructor / Copy Constructor / Assignment Operator
+In Graph: 
+    Constructor / Destructor / Copy Constructor / Assignment Operator
             Manage dynamic memory (big‑3 requirement)
 addVertex()
-    // 
+    creates a new vertex
+    appends to vector of vertices
+addEdge(u, v)
+    inserts edge to adjacency linked list
+BFS(G, s)
+    traverses graph G from source s
+    initializes colors and parents
+    // see slide 7
+
+    
 */
